@@ -1,0 +1,164 @@
+
+@font-face {
+    font-family: 'Shree-Man7-0552LW';
+
+    src: url('../Langs/Shree-Man7-0552LW.eot');
+
+    src: local('Shree-Man7-0552LW'),
+        url('../Langs/Shree-Man7-0552LW.eot?#iefix')     format('embedded-opentype'),
+        url('../Langs/Shree-Man7-0552LW.woff')        format('woff'),
+        url('../Langs/Shree-Man7-0552LW.woff2')   format('woff2'),
+        url('../Langs/Shree-Man7-0552LW.ttf')     format('truetype'),
+        url('../Langs/Shree-Man7-0552LW.svg#Shree-Man7-0552LW') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.langCapB{
+				font-family: 'Shree-Man7-0552LW';
+				font-size:35px;	
+				font-weight:bold;			
+}
+
+.langCap{
+				font-family: 'Shree-Man7-0552LW';
+				font-size:20px;				
+}
+
+.langC{
+				font-family: 'Shree-Man7-0552LW';
+							
+}
+
+.langB{
+			font-family: 'Shree-Man7-0552LW';
+			font-size:22px;	
+			color:Black;				
+}	
+
+.langE
+{
+    font-weight:bold;
+}
+
+
+
+/*--- Load custom MM fonts ---- */
+
+@font-face {
+  src:url('../Langs/M_MAYEK.TTF');
+  font-family: "epaomayek";
+  font-style: normal;
+}
+
+
+.fntiyek
+{
+   
+    font-family: "epaomayek";
+
+}
+
+
+.langMM_C
+{
+    font-size:20px;
+    font-family: "epaomayek";
+
+}
+
+.langMM_CB
+{
+    font-size:20px;
+    font-weight:bold;
+    font-family: "epaomayek";
+
+}
+
+.langMM_CapB
+{
+    font-size:35px;
+    font-weight:bold;
+    font-family: "epaomayek";
+
+}
+
+.langMM_B
+{
+    font-size:22px;
+    color:black;
+    font-family: "epaomayek";
+
+}
+
+/*--- ------------------------ */
+
+
+/*--- Load custom MM RATHA fonts ---- */
+
+/*
+@font-face {
+  src:url('../Langs/Ratha.eot');
+  
+   font-family: 'Ratha';
+    src: url('../Langs/Ratha.eot');
+    src: local('Ratha'),
+        url('../Langs/Ratha.eot?#iefix') format('embedded-opentype'),
+        url('../Langs/Ratha.woff2') format('woff2'),
+        url('../Langs/Ratha.woff') format('woff'),
+        url('../Langs/Ratha.ttf') format('truetype'),
+        url('../Langs/Ratha.svg#Ratha') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+*/
+
+@font-face {
+  src:url('../Langs/RathaMM.ttf');
+  font-family: "Ratha";
+  font-style: normal;
+}
+
+
+.fntRatha_MM
+{
+   
+    font-family: 'Ratha';
+
+}
+
+
+.langRathaMM_C
+{
+    font-size:20px;
+    font-family: 'Ratha';
+
+}
+
+.langRathaMM_CB
+{
+    font-size:20px;
+    font-weight:bold;
+    font-family: 'Ratha';
+
+}
+
+.langRathaMM_CapB
+{
+    font-size:35px;
+    font-weight:bold;
+   font-family: 'Ratha';
+
+}
+
+.langRathaMM_B
+{
+    font-size:22px;
+    color:black;
+    font-family: 'Ratha';
+
+}
+
+/*--- ------------------------ */
+
