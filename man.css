@@ -1,0 +1,42 @@
+/* New Font */
+@font-face {
+  font-family: 'Manipur';
+  src: url('/fonts/M05500F6.woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body, body a{
+	font-family: Manipur !important;
+}
+
+/* English Link */
+.Menu-Bar-1-v1 .menu_container > ul:last-child li a{
+    font-family: Ubuntu !important;
+}
+
+#NewsComp-fjId-mQfS-GbEf-lvsG.News-Article-1-v1 .body_container {
+   font-family: Manipur !important; 
+   line-height: 30px;
+    
+}
+ .News-Article-1-v1 .body_container * { font-family: Manipur !important; }
+ 
+.News-Article-1-v1 .heading_container h1 {
+    font-family: Manipur !important; 
+    
+}
+.ui-1 div{font-size:24px!important}
+
+h1, h2, h3, h4, h5, h6 {
+     font-family: Manipur !important; 
+}
+
+.ui-1 .ui-item .ui-details h2 {
+    font-size: 25px !important;
+    font-weight: bold!important;
+   
+}
+
+
+
