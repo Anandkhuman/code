@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEIC to PDF Converter</title>
+    <script src="https://cdn.jsdelivr.net/npm/heic2any"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        input {
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #preview {
+            margin-top: 20px;
+            max-width: 100%;
+            display: none;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            padding: 12px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>HEIC to PDF Converter</h2>
+        <input type="file" id="fileInput" accept=".heic">
+        <img id="preview">
+        <button onclick="convertToPDF()">Convert to PDF</button>
+    </div>
+
+    <script>
+        let convertedImage = null;
+
+        document.getElementById("fileInput").addEventListener("change", async function (event) {
+            const file = event.target.files[0];
+            if (file) {
+                try {
+                    const blob = await heic2any({ blob: file, toType: "image/jpeg" });
+                    const imgURL = URL.createObjectURL(blob);
+                    convertedImage = new Image();
+                    convertedImage.src = imgURL;
+                    convertedImage.onload = () => {
+                        document.getElementById("preview").src = imgURL;
+                        document.getElementById("preview").style.display = "block";
+                    };
+                } catch (error) {
+                    alert("Error converting HEIC file: " + error.message);
+                }
+            }
+        });
+
+        function convertToPDF() {
+            if (!convertedImage) {
+                alert("Please upload a HEIC file first.");
+                return;
+            }
+            const { jsPDF } = window.jspdf;
+            const pdf = new jsPDF();
+            pdf.addImage(convertedImage, "JPEG", 10, 10, 180, 160);
+            pdf.save("converted.pdf");
+        }
+    </script>
+
+</body>
+</html>
